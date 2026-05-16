@@ -31,6 +31,7 @@ def get_response(user):
     global current_question, current_answer
     user = user.lower().strip()
 
+    
     # Check answer if a question was asked
     if current_question:
         if user == current_answer:
@@ -39,6 +40,7 @@ def get_response(user):
         else:
             current_question = None
             return f"Not quite. The correct answer is {current_answer}."
+
 
     # Greetings + time-based
     if any(word in user for word in ["hello", "hi", "hey"]):
